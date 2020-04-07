@@ -1,0 +1,20 @@
+dist: xenial
+os: linux
+language: minimal
+
+before_script:
+  - echo "alor dos scripts"
+
+script:
+  - echo "olar comando 1"
+  - echo "alor comando 2"
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: pages
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
